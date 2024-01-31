@@ -212,15 +212,15 @@ float getColorExact(int portNumber){
 		if (portNumber == 3){
 			if (getTrueColor(3) ==  2 && 6 <= getTrueReflection(3) <= 9){   
 				x = 1;
-				writeDebugStreamLine("%f", getTrueColor());
+				writeDebugStreamLine("%f", getTrueColor(3));
 				return getTrueColor(3); //blue
 			} else if (getTrueColor(3) == 5 && 49 <= getTrueReflection(3) <= 52){
 				x = 1;
-				writeDebugStreamLine("%f", getTrueColor());
+				writeDebugStreamLine("%f", getTrueColor(3));
 				return getTrueColor(3) //red
 			} else if (getTrueColor(3) == 3 && 14 <= getTrueReflection(3) <= 16){
 				x = 1;
-				writeDebugStreamLine("%f", getTrueColor());
+				writeDebugStreamLine("%f", getTrueColor(3));
 				return getTrueColor(3); //green
 			} 
 		}
