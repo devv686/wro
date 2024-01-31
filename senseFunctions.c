@@ -209,12 +209,22 @@ float getColorExact(int portNumber){
 	int x = 0
 	while (x==0){
 		if (portNumber == 3){
-			if (getTrueColor(3) == __ && getTrueReflection(3) == ____ && getTrue){
-				return 
-			}
-			
+			if (getTrueColor(3) ==  && getTrueReflection(3) ==  && getTrue){
+				x = 1;
+				return getTrueColor(3);
+			} else if (getTrueColor(3) ==   && getTrueReflection(3) ==  && getTrue){
+				x = 1;
+				return getTrueColor(3);
+			} else if (getTrueColor(3) ==  && getTrueReflection(3) ==  && getTrue){
+				x = 1;
+				return getTrueColor(3);
+			} else if (getTrueColor(3) ==  && getTrueReflection(3) ==  && getTrue){
+				x = 1;
+				return getTrueColor(3);
+			} else if (getTrueColor(3) ==  && getTrueReflection(3) ==  && getTrue){
+				x = 1;
+				return getTrueColor(3);
 		}
-			//CS4, CS3
 		else if (portNumber == 4){
 			
 		}
