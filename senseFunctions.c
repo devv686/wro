@@ -204,3 +204,19 @@ float getReflFromTrue(int refl, int portNumber)
 			return 0;
 	}
 }
+
+float getColorExact(int portNumber){
+	int x = 0
+	while (x==0){
+		if (portNumber == 3){
+			if (getTrueColor(3) == __ && getTrueReflection(3) == ____ && getTrue){
+				return 
+			}
+			
+		}
+			//CS4, CS3
+		else if (portNumber == 4){
+			
+		}
+	}
+}
