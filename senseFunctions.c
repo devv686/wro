@@ -206,22 +206,28 @@ float getReflFromTrue(int refl, int portNumber)
 }
 
 float getColorExact(int portNumber){
-	int x = 0
+	clearDebugStream();
+	int x = 0;
 	while (x==0){
 		if (portNumber == 3){
 			if (getTrueColor(3) ==  2 && 6 <= getTrueReflection(3) <= 9){   
 				x = 1;
+				writeDebugStreamLine("%f", getTrueColor());
 				return getTrueColor(3); //blue
-			} else if (getTrueColor(3) == 5  && 49 <= getTrueReflection(3) <= 52){
+			} else if (getTrueColor(3) == 5 && 49 <= getTrueReflection(3) <= 52){
 				x = 1;
-				return getTrueColor(3 //red
+				writeDebugStreamLine("%f", getTrueColor());
+				return getTrueColor(3) //red
 			} else if (getTrueColor(3) == 3 && 14 <= getTrueReflection(3) <= 16){
 				x = 1;
+				writeDebugStreamLine("%f", getTrueColor());
 				return getTrueColor(3); //green
 			} 
 		}
-		else if (portNumber == 4){
+		//else if (portNumber == 4){
 			//blue, green, nothing
-		}
+		//}
 	}
 }
+
+
