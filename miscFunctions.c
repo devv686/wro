@@ -57,7 +57,9 @@ void setSpeeds(float rSpeed, float lSpeed){
   // !!finish and include the speed adjustment based on the ratio 
 }
 
-float degToCM(){
+float degToCM(float deg){
+  float cm = deg*wheelDiameter 
+}
 
 
 
