@@ -205,29 +205,43 @@ float getReflFromTrue(int refl, int portNumber)
 	}
 }
 
+
 float getColorExact(int portNumber){
-	clearDebugStream();
-	int x = 0;
-	while (x==0){
-		if (portNumber == 3){
-			if (getTrueColor(3) ==  2 && 6 <= getTrueReflection(3) <= 9){   
-				x = 1;
-				writeDebugStreamLine("%f", getTrueColor(3));
-				return getTrueColor(3); //blue
-			} else if (getTrueColor(3) == 5 && 49 <= getTrueReflection(3) <= 52){
-				x = 1;
-				writeDebugStreamLine("%f", getTrueColor(3));
-				return getTrueColor(3) //red
-			} else if (getTrueColor(3) == 3 && 14 <= getTrueReflection(3) <= 16){
-				x = 1;
-				writeDebugStreamLine("%f", getTrueColor(3));
-				return getTrueColor(3); //green
-			} 
-		}
-		//else if (portNumber == 4){
-			//blue, green, nothing
-		//}
+	if (portNumber == 3){
+		if (getTrueColor(3) ==  2 && (6 <= getTrueReflection(3) || getTrueReflection(3) <= 9)){   
+			writeDebugStreamLine("%f", getTrueColor(3));
+			return BLUE; 
+		} else if (getTrueColor(3) == 5 && (49 <= getTrueReflection(3) || getTrueReflection(3) <= 52)){
+			writeDebugStreamLine("%f", getTrueColor(3));
+			return RED; 
+		} else if (getTrueColor(3) == 3 && (14 <= getTrueReflection(3) || getTrueReflection(3) <= 16)){
+			writeDebugStreamLine("%f", getTrueColor(3));
+			return GREEN; 
+		} else if (getTrueColor(3) == 4 && (14 <= getTrueReflection(3) || getTrueReflection(3) <= 16)){
+			writeDebugStreamLine("%f", getTrueColor(3));
+			return YELLOW; // add values
+		} else if (getTrueColor(3) == 7 && (14 <= getTrueReflection(3) || getTrueReflection(3) <= 16)){
+			writeDebugStreamLine("%f", getTrueColor(3));
+			return BROWN; //add values
+		} else if (getTrueColor(3) == 1 && (getTrueReflection(3) == black3){
+			writeDebugStreamLine("%f", getTrueColor(3));
+			return BLACK; 
+		} else if (getTrueColor(3) == 6 && (getTrueReflection(3) == white3){
+			writeDebugStreamLine("%f", getTrueColor(3));
+			return WHITE; 
+		} 
 	}
+		else if (portNumber == 4){
+			if (120 <= getHue(4) && getHue(4) <= 200){
+				return GREEN;
+			}else if ((210 <= getHue(4) && getHue(4) >= 240) || (getGreen(4) == 0 && getBlue(4) > 0)){
+				return BLUE;	
+		}
+	}
+	return 0;
+}
+
+	
 }
 
 
